@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>15testif.html</title>
+    <style>
+        button {
+            background-color: rgb(106, 106, 233);
+            color: aliceblue;
+            padding: 7px;
+            font-size: 16pt;
+            border-radius: 10px;
+        }
+    </style>
+<script>
+        function mypass() {
+            var kor=0, eng=0, hap=0, age=0, msg='', result='';
+
+            kor=49;
+            eng=100; 
+            hap=kor+eng;
+            avg=hap/2;
+          
+            //과목별 최소 50점 평균70점 합격
+            if(avg>=70 && kor>=50 && eng>=50) {msg='축합격';}
+            else {msg='재시험';}
+
+            result= '<h2>국어='+kor+'<br>영어='+eng;
+            result += '<h2>총점='+hap+'<br>평균='+avg+ '<br>결과='+ msg+'</h2>';
+            document.getElementById('display').innerHTML=result;
+        }
+</script>
+</head>
+<body>
+    <div id="display">
+        <img src="./images/a2.png" width="100" height="60">
+        <img src="./images/a2.png" width="100" height="60">
+        <img src="./images/a2.png" width="100" height="60">
+    </div>
+    <h2>15testif.html</h2>
+    <button onclick="mypass()">점수확인</button>
+    <br>
+    
+
+    
+</body>
+</html>

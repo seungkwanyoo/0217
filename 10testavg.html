@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10testavg.html</title>
+    <style>
+        button {
+            background-color: rgb(106, 106, 233);
+            color: aliceblue;
+            padding: 7px;
+            font-size: 16pt;
+            border-radius: 10px;
+        }
+    </style>
+<script>
+        function mypass() {
+            var kor=0, eng=0, hap=0, age=0, msg='', grade='F', result='';
+            const PI=3.1415 ; //상수
+            const SM='박진영'; //상수
+            const NT='대한민국'; //상수
+
+            //PI=7.8; 재할당하지마세요
+
+            //321페이지 데이터-primitive(숫자,문자,불)/object(배열)
+            
+
+            kor=95; eng=80; 
+            hap=kor+eng;
+            avg=hap/2;
+            
+            //다중if
+            if(avg>=90) {grade='A';}
+            else if(avg>=80) {grade='B';}
+            else if(avg>=70) {grade='C';}
+            else if(avg>=60) {grade='D';}
+            else {grade='F';}
+            
+            //문제 100~70점까지 축합격, 0~69점 재시험 if~else
+            //총점,평균,합격인지 재시험인지
+            
+            //단순if
+            if(avg>=70) {msg='축합격';}
+            else {msg='재시험';}
+
+            result= '<h2>총점='+hap+'<br>평균='+avg;
+            result +='<br>결과='+ msg+'<br>학점='+grade+'</h2>';
+
+            document.getElementById('display').innerHTML=result;
+        }
+</script>
+</head>
+<body>
+    
+        <img src="./pizza_images/a1.png" width="100" height="60">
+        <img src="./pizza_images/a1.png" width="100" height="60">
+        <img src="./pizza_images/a1.png" width="100" height="60">
+        <div id="display"></div>
+
+    <h2>10testavg.html</h2>
+    <button onclick="mypass()">점수확인</button>
+    <br>
+    
+
+    
+</body>
+</html>

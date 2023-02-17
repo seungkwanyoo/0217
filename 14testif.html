@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>14testif.html</title>
+    <style>
+        button {
+            background-color: rgb(106, 106, 233);
+            color: aliceblue;
+            padding: 7px;
+            font-size: 16pt;
+            border-radius: 10px;
+        }
+    </style>
+<script>
+        function mypass() {
+            var kor=0, eng=0, hap=0, age=0, msg='', result='';
+
+            kor=parseInt(prompt('국어점수입력하세요',0));
+            eng=Number(prompt('영어점수입력하세요',0)); 
+            hap=kor+eng;
+            avg=hap/2;
+          
+            if(avg>=70) {msg='축합격';}
+            else {msg='재시험';}
+
+            result= '<h2>총점='+hap+'<br>평균='+avg+ '<br>결과='+ msg;
+
+            document.getElementById('display').innerHTML=result;
+        }
+</script>
+</head>
+<body>
+    <div id="display">
+        <img src="./pizza_images/cp.jpg" width="100" height="60">
+        <img src="./pizza_images/cp.jpg" width="100" height="60">
+        <img src="./pizza_images/cp.jpg" width="100" height="60">
+    </div>
+    <h2>14testif.html</h2>
+    <button onclick="mypass()">점수확인</button>
+    <br>
+    
+
+    
+</body>
+</html>

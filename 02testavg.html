@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01testavg.html</title>
+    <style>
+        button {
+            background-color: rgb(106, 106, 233);
+            color: aliceblue;
+            padding: 10px;
+            font-size: 16pt;
+            border-radius: 10px;
+        }
+    </style>
+<script>
+        function mypass() {
+            var kor=0, eng=0, hap=0, age=0, msg='', grade='F', result='';
+
+            kor=90; eng=85; 
+            hap=kor+eng;
+            avg=hap/2;
+            //문제 100~70점까지 축합격, 0~69점 재시험 if~else
+            //총점,평균,합격인지 재시험인지
+            if(avg>=70) {msg='축합격';}
+            else {msg='재시험';}
+
+            result= '<h2>총점='+hap+'<br>평균='+avg+'결과='+ msg+'</h2>';
+
+            document.getElementById('display').innerHTML=msg;
+        }
+</script>
+</head>
+<body>
+    <div id="display">
+        <img src="./pizza_images/cp.jpg" width="100" height="60">
+        <img src="./pizza_images/cp.jpg" width="100" height="60">
+        <img src="./pizza_images/cp.jpg" width="100" height="60">
+        </div>
+    <h2>01testavg.html</h2>
+    <button onclick="mypass()">점수확인</button>
+    <br>
+
+    
+</body>
+</html>
